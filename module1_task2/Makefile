@@ -1,4 +1,4 @@
-help:
+help:	## Show this help usage
 	@fgrep -h "##" $(MAKEFILE_LIST) | sed -e 's/\(\:.*\#\#\)/\:\ /' | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 build:	## Generate the website from the project's source files.
 	hugo
