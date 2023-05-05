@@ -5,6 +5,4 @@ post:	## Generate a new article
 clean:	## Remove generated files or directories and can be used in a Hugo project to delete the generated site files
 	rm -r dist
 help:
-	echo "build: Generate the website from the project's source files."
-	echo "post: Generate a new article"
-	echo "clean: Remove generated files or directories and can be used in a Hugo project to delete the generated site files"
+	@fgrep -h "##" $(MAKEFILE_LIST) | sed -e 's/\(\:.*\#\#\)/\:\ /' | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
