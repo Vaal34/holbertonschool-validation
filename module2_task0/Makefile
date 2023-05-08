@@ -3,7 +3,7 @@ build:
 run:
 	./awesome-api > ./awesome-api.log 2>&1 &
 stop:
-	kill "$(pgrep awesome-api)"
+	pgrep awesome-api | xargs kill
 clean:
 	rm awesome.api.log
 test:
