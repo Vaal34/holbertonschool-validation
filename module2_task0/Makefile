@@ -5,6 +5,6 @@ run:
 stop:
 	pgrep awesome-api | xargs kill
 clean:
-	rm awesome-api.log && rm awesome-api
+	rm awesome-api.log && rm awesome-api && make stop
 test:
 	curl http://localhost:9999/health && curl http://localhost:9999
