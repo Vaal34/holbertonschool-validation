@@ -15,6 +15,6 @@ lint: ## detect all codage error
 unit-tests: ## check unit-tests
 	go test -v -short -coverprofile=coverage-units.out
 integration-tests: ## check integration tests
-	go test -tags=integration -coverprofile=coverage-integrations.out
+	go test -v -short -tags=integration -coverprofile=coverage-integrations.out
 help: ## show an help
 	@fgrep -h "##" $(MAKEFILE_LIST) | sed -e 's/\(\:.*\#\#\)/\:\ /' | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//' 
