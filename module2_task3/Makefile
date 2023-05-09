@@ -1,5 +1,5 @@
 build: ## compile the main in executable
-	make lint && go build
+	make lint && go build 
 run: ## launch the server
 	./awesome-api > ./awesome-api.log 2>&1 &
 stop: ## stop the server

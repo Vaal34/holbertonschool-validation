@@ -1,5 +1,5 @@
 package main
-
+ 
 import (
   //nolint:staticcheck
   "io/ioutil"
