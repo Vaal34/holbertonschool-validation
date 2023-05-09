@@ -15,4 +15,4 @@ lint: ## detect all codage error
 unit-tests: ## check unit-tests
 	go test -v -short -coverprofile=coverage-units.out
 help: ## show an help
-	@fgrep -h "##" $(MAKEFILE_LIST) | sed -e 's/\(\:.*\#\#\)/\:\ /' | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
+	@fgrep -h "##" $(MAKEFILE_LIST) | sed -e 's/\(\:.*\#\#\)/\:\ /' | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//' 

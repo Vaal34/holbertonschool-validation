@@ -24,7 +24,7 @@ func HelloHandler(w http.ResponseWriter, r *http.Request) {
 		name = "there"
 	default:
 		// Set the name variable to the first parameter "name" in the request
-		name = nameParams[0]
+		name = nameParams[0] 
 	}
 
 	// Return status 400 if name is empty
