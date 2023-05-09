@@ -13,4 +13,5 @@ make test -> test the server
 make clean -> clean the directory
 make lint -> detect all codage error
 make unit-tests -> check unit-tests
+make integration-tests -> check integration tests
 make help -> show an help 
