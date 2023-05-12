@@ -1,6 +1,7 @@
 help:	## Show this help usage
 	@fgrep -h "##" $(MAKEFILE_LIST) | sed -e 's/\(\:.*\#\#\)/\:\ /' | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 build:	## Generate the website from the project's source files.
+	./setup.sh
 	make check
 	hugo
 post:	## Generate a new article
