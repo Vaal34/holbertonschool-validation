@@ -10,3 +10,5 @@ build:  Generate the website from the project's source files.
 post:   Generate a new article
 clean:  Remove generated files or directories and can be used in a Hugo project to delete the generated site files
 help:   if you need to know what command made
+check: test tes
+valide Verify if the html respect W3C
