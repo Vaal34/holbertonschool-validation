@@ -1,8 +1,13 @@
-#!/bin/bash
-
-apt-get update -qq\
-&& apt-get install make -yqq && apt-get install hugo -yqq && apt-get install wget -yqq \
-&& wget -qq https://github.com/gohugoio/hugo/releases/download/v0.84.1/hugo_extended_0.84.1_Linux-64bit.tar.gz \
-&& tar -xzvf hugo_extended_0.84.1_Linux-64bit.tar.gz \
-&& mv hugo /usr/local/bin/ \
-&& rm hugo_extended_0.84.1_Linux-64bit.tar.gz && make build -s
+apt-get update && apt-get install -y hugo make git wget
+wget https://github.com/gohugoio/hugo/releases/download/v0.111.3/hugo_0.111.3_Linux-64bit.tar.gz
+tar -xf hugo_0.111.3_Linux-64bit.tar.gz
+mv ./hugo /usr/bin/
+wget https://go.dev/dl/go1.20.4.linux-amd64.tar.gz
+rm -rf /usr/local/go && tar -C /usr/local -xzf go1.20.4.linux-amd64.tar.gz
+export PATH=$PATH:/usr/local/go/bin
+cd /app
+git clone https://github.com/PhYdrogen/holbertonschool-validation
+cd holbertonschool-validation/module1_task4/
+make build
+mv ./dist ../../
+exit
