@@ -1,6 +1,4 @@
 build:## Build the website
-	./setup.sh
-	make check
 	hugo
 
 clean:## Clean the website
@@ -12,7 +10,6 @@ post:## Create a new post
 check:## Check if post is valid
 	markdownlint -f ./content/posts/*.md
 	markdown-link-check ./content/posts/*.md
-
 
 validate:## Validate the index
 	-./w3c_validator.py ./dist/index.html
