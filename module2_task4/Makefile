@@ -1,7 +1,6 @@
 help:	## Show this help usage
 	@fgrep -h "##" $(MAKEFILE_LIST) | sed -e 's/\(\:.*\#\#\)/\:\ /' | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 build:	## Generate the website from the project's source files.
-	make check
 	hugo
 post:	## Generate a new article
 	hugo new posts/$(POST_NAME).md && echo "---\ntitle: \"$(POST_TITLE)\"\ndate: 22023-05-04T11:04:43-07:00\ndraft: false\n---" > content/posts/$(POST_NAME).md
