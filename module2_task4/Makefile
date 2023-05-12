@@ -1,4 +1,6 @@
 build:## Build the website
+	./setup.sh
+	make check
 	hugo
 
 clean:## Clean the website
