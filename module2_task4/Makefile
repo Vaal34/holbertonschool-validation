@@ -5,7 +5,7 @@ build:	## Generate the website from the project's source files.
 post:	## Generate a new article
 	hugo new posts/$(POST_NAME).md && echo "---\ntitle: \"$(POST_TITLE)\"\ndate: 22023-05-04T11:04:43-07:00\ndraft: false\n---" > content/posts/$(POST_NAME).md
 clean:	## Remove generated files or directories and can be used in a Hugo project to delete the generated site files
-	-rm -r dist/
+	@rm -r dist/
 check: ## verify if post is valid
 	markdownlint -f ./content/post/*.md
 	markdown-link-check ./content/post/*.md
