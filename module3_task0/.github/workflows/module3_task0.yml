@@ -1,0 +1,9 @@
+name: module3_task0
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-22.04   
+      steps:
+      - actions/checkout@v3 # clone
+      - run: make help
+
