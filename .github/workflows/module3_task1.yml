@@ -23,13 +23,13 @@ jobs:
         run: cd module3_task1 && make run
 
       - name: Run Make Post
-        run: cd module3_task1 && make POST_NAME=welcome POST_TITLE="Welcome" post
-      
+        run: cd module3_task1 && make POST_NAME=welcome POST_TITLE="Welcom" post
+
       - name: Run Make Stop
         run: cd module3_task1 && make stop
-      
+
       - name: Run Make Clean
         run: cd module3_task1 && make clean
-      
+
       - name: Run Make Test
         run: cd module3_task1 && make test
