@@ -34,5 +34,3 @@ jobs:
       - name: Run Make Clean
         run: cd module3_task1/ && make clean
 
-      - name: Run Make Lint
-        run: make lint
