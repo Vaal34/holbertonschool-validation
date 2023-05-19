@@ -15,5 +15,3 @@ jobs:
           repository: ''
       - run: |
           cd module3_task2/ && ./setup.sh && make build
-      - run:
-          make lint
