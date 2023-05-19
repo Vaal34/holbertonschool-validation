@@ -18,7 +18,7 @@
 
 - integration-tests: Run integration tests.
 
-- lint: Lint go lang code.
+- lint: Lint the README.md and DEPLOY.md
 
 - check: Lint markdonw source, check dead links.
 
