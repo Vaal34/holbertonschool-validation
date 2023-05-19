@@ -1,0 +1,27 @@
+---
+name: module3_task4
+
+"on":  # do something on push to main
+  pull_request:
+    branches:
+      - main
+  push:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: ''
+      - name: Build
+        run: |
+          cd module3_task4/ && make build
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: module3_task4/awesome-website.zip
+          body_path: module3_task4/DEPLOY.md
