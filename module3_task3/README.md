@@ -14,3 +14,4 @@ validate: Validate the index
 package: Package the website
 lint: Lint the README.md and DEPLOY.md
 help: Makefile help
+
