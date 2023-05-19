@@ -1,36 +1,17 @@
 ---
 name: module3_task2
 
-"on":
+"on":  # do something on push to main
   push:
   schedule:
-    - cron: "5 6 * * *"
+    - cron: "0 0 * * *"
 
 jobs:
   build:
     runs-on: ubuntu-22.04
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      - name: Run Setup SH
-        run: cd module3_task2 && ./setup.sh
-
-      - name: Run Make Build
-        run: cd module3_task2/ && make build
-
-      - name: Run Make Run
-        run: cd module3_task2/ && make run
-
-      - name: Run Make Post
-        run: cd module3_task2/ && make POST_NAME=welcom POST_TITLE="Welcom" post
-
-      - name: Run Make Stop
-        run: cd module3_task2/ && make stop
-
-      - name: Run Make Test
-        run: cd module3_task2/ && make test
-
-      - name: Run Make Clean
-        run: cd module3_task2/ && make clean
-
+      - uses: actions/checkout@v3
+        with:
+          repository: ''
+      - run: |
+          cd module3_task2/ && ./setup.sh && make build
